@@ -277,8 +277,10 @@ class Commands {
                 MessageOutput.println("implements:", interfaze.name());
             }
 
-            for (ClassType sub : clazz.subclasses()) {
-                MessageOutput.println("subclass:", sub.name());
+            if (showAll) {
+                for (ClassType sub : clazz.subclasses()) {
+                    MessageOutput.println("subclass:", sub.name());
+                }
             }
             for (ReferenceType nest : clazz.nestedTypes()) {
                 MessageOutput.println("nested:", nest.name());
@@ -289,11 +291,13 @@ class Commands {
             for (InterfaceType superinterface : interfaze.superinterfaces()) {
                 MessageOutput.println("extends:", superinterface.name());
             }
-            for (InterfaceType sub : interfaze.subinterfaces()) {
-                MessageOutput.println("subinterface:", sub.name());
-            }
-            for (ClassType implementor : interfaze.implementors()) {
-                MessageOutput.println("implementor:", implementor.name());
+            if (showAll) {
+                for (InterfaceType sub : interfaze.subinterfaces()) {
+                    MessageOutput.println("subinterface:", sub.name());
+                }
+                for (ClassType implementor : interfaze.implementors()) {
+                    MessageOutput.println("implementor:", implementor.name());
+                }
             }
             for (ReferenceType nest : interfaze.nestedTypes()) {
                 MessageOutput.println("nested:", nest.name());

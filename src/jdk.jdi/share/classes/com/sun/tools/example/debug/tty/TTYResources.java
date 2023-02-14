@@ -372,7 +372,7 @@ public class TTYResources extends java.util.ListResourceBundle {
              "locals                    -- print all local variables in current stack frame\n" +
              "\n" +
              "classes                   -- list currently known classes\n" +
-             "class <class id>          -- show details of named class\n" +
+             "class <class id> [all]    -- show details of named class\n" +
              "methods <class id>        -- list a class's methods\n" +
              "fields <class id>         -- list a class's fields\n" +
              "\n" +
